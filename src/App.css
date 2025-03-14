@@ -1,0 +1,104 @@
+.App {
+  text-align: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Mantiene la altura mínima de la pantalla */
+  font-family: 'Arial', sans-serif; /* Fuente más estilizada */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  position: relative; /* Necesario para el pseudo-elemento ::before */
+  background-image: url('./assets/fondo.jpg'); /* Imagen de fondo */
+  background-position: center center; /* Asegura que la imagen esté centrada */
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white; /* Color de texto blanco */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  min-height: 75vh; /* Ocupa el 75% de la altura de la pantalla */
+}
+
+.App-header::before {
+  content: ''; /* Pseudo-elemento para el fondo oscuro */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semitransparente */
+  z-index: 1; /* Asegura que el fondo oscuro esté al frente */
+}
+
+.App-header h1, .home-description {
+  z-index: 2; /* Asegura que el texto esté por encima del fondo oscuro */
+  position: relative; /* Necesario para que el z-index funcione */
+  text-align: center; /* Centrar el texto */
+}
+
+.App-header h1 {
+  font-size: 4rem; /* Título más grande */
+  margin-bottom: 15px; /* Más espacio debajo del título */
+}
+
+.home-description {
+  font-size: 1.8rem; /* Aumento del tamaño de la descripción */
+  margin-top: 0;
+  color: #ddd; /* Gris claro para la descripción */
+}
+
+.search-bar-container {
+  z-index: 2; /* Asegura que la barra esté visible */
+  position: relative;
+  margin-top: 20px; /* Espaciado entre la descripción y la barra */
+  width: 100%; /* Toma el ancho completo */
+  display: flex;
+  justify-content: center; /* Centra la barra */
+}
+
+.search-bar {
+  width: 80%; /* Ajustar el ancho */
+  max-width: 600px; /* Limitar el ancho máximo */
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.search-bar:focus {
+  outline: none; /* Quita el borde azul predeterminado */
+  border-color: #61dafb; /* Borde azul claro al hacer clic */
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.8); /* Brillo azul claro */
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
