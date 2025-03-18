@@ -7,7 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 // Claves de WooCommerce (Usa variables de entorno en producción)
 const API_KEY = process.env.REACT_APP_API_KEY;
 const API_SECRET = process.env.REACT_APP_API_SECRET;
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+const BASE_URL = "/wp-json/wc/v3";
+
 
 // Obtener ID de categoría por slug
 async function getCategoryIdBySlug(slug) {
