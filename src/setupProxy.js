@@ -1,3 +1,4 @@
+// src/setupProxy.js
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
@@ -21,10 +22,6 @@ module.exports = function(app) {
       },
     })
   );
-
-  // Configura el host y el puerto
-  app.set('host', '0.0.0.0'); // Asegúrate de que la app sea accesible desde cualquier IP
-  app.set('port', 3000);       // Establece el puerto
 };
 
 
