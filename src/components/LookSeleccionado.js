@@ -5,10 +5,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 // Claves de WooCommerce (Usa variables de entorno en producción)
-const API_KEY = process.env.REACT_APP_API_KEY;
-const API_SECRET = process.env.REACT_APP_API_SECRET;
-const BASE_URL = "/wp-json/wc/v3";
-
+const API_KEY = "ck_d1f69b84bded161bcadb7cdc5538f3a0f4cc93fd";
+const API_SECRET = "cs_47a034d947e28dbc135f0b14539c358a802a233f";
+const BASE_URL = "https://www.masdescuentos.mx/wp-json/wc/v3";
 
 // Obtener ID de categoría por slug
 async function getCategoryIdBySlug(slug) {
