@@ -16,6 +16,7 @@ import look13 from '../assets/look13.jpg';
 import look14 from '../assets/look14.jpg';
 import look15 from '../assets/look15.jpg';
 import look16 from '../assets/look16.jpg';
+import look17 from '../assets/look17.jpg';
 import lookhombre1 from '../assets/lookhombre1.jpg';
 import lookhombre2 from '../assets/lookhombre2.jpg';
 import lookhombre3 from '../assets/lookhombre3.jpg';
@@ -165,7 +166,14 @@ export const looks = {
       relatedProducts: ['Blusa', 'Zapatillas para mujer', 'Bolsa'],
       description: 'Taylor Swift luce una mini falda junto con zapatos café claro, un top negro sencillo y una bolsa roja que da el toque de color perfecto a su look.' 
     },
-
+    { 
+      id: 17, 
+      name: 'Hailey Bieber', 
+      imageUrl: look17, 
+      occasion: 'Casual', 
+      relatedProducts: ['Top', 'Jeans', 'Chamarra piel'],
+      description: 'Hailey Bieber luce un sexy look casual con unos jeans wide legs, una croptop verde, chamarra de piel negra con unos zapatos mocasines bostonianos para un look my chic.' 
+    },
   ],
   hombre: [
     { 

@@ -75,6 +75,8 @@ const LookSeleccionado = ({ selectedLook }) => {
     "Blusa floral": "https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/blusas-y-camisas-mujer-ropa/",
     
     "mujer-ropa-tops": "https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/mujer-ropa-tops/",
+
+    "Jeans": "https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/mujer-ropa-pantalones/",
     
     "Abrigo": 'https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/mujer-ropa-abrigos/',
     
@@ -175,6 +177,7 @@ if (slug.includes("hombre")) {  // Para categorías de hombre
     "sacos-mujer": 3925, // Look 3 Mujer
     "mujer-ropa-faldas": 3051, // Look 3 Mujer
     "mujer-ropa-tops": 5029, // Look 4 Mujer
+    "mujer-ropa-pantalones": 3035, // Look 17 Mujer
     "abrigos-mujer": 3325, // Look 5 Mujer
     "mujer-ropa-vestidos": 3043, // Look 6 Mujer
     "mujer-ropa-bermudas-y-shorts": 3107, // Look 7 Mujer
