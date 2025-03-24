@@ -34,6 +34,7 @@ import lookhombre15 from '../assets/lookhombre15.jpg';
 import lookhombre16 from '../assets/lookhombre16.jpg';
 import lookhombre17 from '../assets/lookhombre17.jpg';
 import lookhombre18 from '../assets/lookhombre18.jpg';
+import lookhombre19 from '../assets/lookhombre19.jpg';
 export const looks = {
   mujer: [
     { 
@@ -311,7 +312,14 @@ export const looks = {
       relatedProducts: ['Saco para hombre', 'Calzado hombre', 'Calzado casual'],
       description: 'Zac Efron luce un traje gris claro con camisa blanca y corbata negra, perfecto para un look clásico y sofisticado.' 
     },
-
-  ],
+    { 
+      id: 19, 
+      name: 'Juanpa Zurita', 
+      imageUrl: lookhombre19, 
+      occasion: 'Sport', 
+      relatedProducts: ['Jerseys'],
+      description: 'Juanpa luce un look juvenil con saco oscuro y el Jersey de la selección de México en color negro, ideal para un viernes social.'
+    },
+    ],
 };
 

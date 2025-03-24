@@ -2,53 +2,63 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
+  align-items: center; /* Centra el contenido dentro del contenedor principal */
 }
 
 .selected-look-details {
   display: flex;
+  flex-direction: row;
+  justify-content: center; /* Centra los elementos en el contenedor */
   margin-bottom: 20px;
+  align-items: center; /* Centra verticalmente las imágenes e info */
 }
 
 .selected-look-details img {
   max-width: 300px;
+  height: auto; /* Para mantener las proporciones */
   margin-right: 20px;
 }
 
 .selected-look-info {
   max-width: 600px;
+  text-align: center; /* Centra el texto de la descripción */
 }
 
 .related-items {
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-  text-align: center; /* Centra el texto dentro del contenedor */
-  margin-top: 20px; /* Espacio entre la info y los relacionados */
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .related-items-list {
   display: flex;
-  justify-content: center; /* Centra los items horizontalmente */
-  align-items: center; /* Centra los items verticalmente (si es necesario) */
-  gap: 20px; /* Espacio entre productos (ajusta a tu gusto) */
-  width: fit-content; /* El contenedor se ajusta al ancho del contenido */
-  margin: 0 auto; /* Centra el contenedor en su padre */
+  justify-content: center; /* Centra los productos horizontalmente */
+  align-items: center; /* Centra los productos verticalmente */
+  gap: 20px; /* Ajusta el espacio entre los productos */
+  width: 100%; /* El contenedor ocupa todo el ancho disponible */
+  flex-wrap: wrap; /* Permite que los productos se ajusten si no hay suficiente espacio */
+  margin: 0 auto; /* Centra el contenedor */
 }
 
-.related-item { /* Elimina el width fijo de aquí */
-  /* No necesitas width fijo aquí, deja que los items se ajusten al tamaño de la imagen */
+.related-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos dentro de cada item */
 }
 
 .related-item img {
-  max-width: 200px; /* Ancho máximo de la imagen */
+  max-width: 200px;
   height: auto;
   object-fit: contain;
   max-height: 250px;
-  display: block; /* Evita espacios en blanco debajo de la imagen */
-  margin: 0 auto; /* Centra la imagen dentro de .related-item */
+  display: block;
+  margin: 0 auto; /* Centra la imagen */
 }
 
 .related-item a {
   text-decoration: none;
   font-weight: bold;
-  display: block; /* Para que el enlace ocupe todo el ancho del contenedor */
-  text-align: center; /* Centra el texto del enlace */
+  display: block;
+  text-align: center; /* Centra el texto dentro del enlace */
+  margin-top: 10px; /* Espacio entre la imagen y el enlace */
 }

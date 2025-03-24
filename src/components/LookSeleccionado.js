@@ -120,6 +120,9 @@ const LookSeleccionado = ({ selectedLook }) => {
     "Zapatillas": "https://www.masdescuentos.mx/categoria/moda/hombre/hombre-calzado/hombre-calzado-casuales/",
     
     "Sudadera": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/hombre-ropa-pantalones/",
+  
+    "Jerseys": "https://www.masdescuentos.mx/categoria/moda/hombre/hombre-ropa/jerseys/",
+  
   };
 
   // Obtener URL de categoría
@@ -157,6 +160,7 @@ if (slug.includes("hombre")) {  // Para categorías de hombre
     "sacos-hombre-ropa": 3926, // Look 10 Hombre
     "hombre-ropa-pantalones": 2915, // Look 10 Hombre
     "hombre-calzado-botas-y-botines": 2939,// Look 10 Hombre
+    "jerseys": 7260, // Look 19 Hombre
     
   };
 

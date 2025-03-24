@@ -43,21 +43,19 @@
     /* Contenedor de looks */
     .looks-container {
       display: flex;
-      flex-wrap: nowrap; /* Evita que los elementos se vayan a la siguiente línea */
-      justify-content: flex-start; /* Alinea los elementos a la izquierda */
+      justify-content: center; /* Centra los elementos en el carrusel */
+      align-items: center;
       gap: 20px; /* Espacio entre los elementos */
       overflow-x: auto; /* Permite desplazamiento horizontal */
-      scroll-snap-type: x mandatory; /* Suaviza el desplazamiento */
+      scroll-snap-type: x mandatory; /* Hace que el desplazamiento sea más fluido */
       padding: 10px 0;
-      white-space: nowrap; /* Asegura que el contenido no se divida en múltiples líneas */
     }
 
     /* Estilo de cada look */
+    
     .look-item {
-      flex: 0 0 auto; /* Evita que los elementos cambien de tamaño dinámicamente */
-      width: 300px; /* Tamaño fijo para cada look */
-      max-width: 100%;
-      scroll-snap-align: start; /* Facilita el desplazamiento de un elemento a otro */
+      flex: 0 0 40%; /* Ajusta el tamaño para que ocupen espacio uniforme */
+      max-width: 300px;
     }
 
 
@@ -717,8 +715,5 @@
     overflow-x: hidden; /* Esto evita el desplazamiento hacia la izquierda de la pantalla */
   }
   
-  .slick-track {
-    display: flex !important;
-    flex-direction: row !important;
- }
- 
+
+  
