@@ -171,7 +171,7 @@ export const looks = {
       name: 'Hailey Bieber', 
       imageUrl: look17, 
       occasion: 'Casual', 
-      relatedProducts: ['Top', 'Jeans', 'Chamarra piel'],
+      relatedProducts: ['Jeans', 'Chamarra piel'],
       description: 'Hailey Bieber luce un sexy look casual con unos jeans wide legs, una croptop verde, chamarra de piel negra con unos zapatos mocasines bostonianos para un look my chic.' 
     },
   ],
