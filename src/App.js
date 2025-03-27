@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReactGA from "react-ga4"; // Importa la librería de GA4
 import "./App.css";
 import "./SearchBar.css";
 import Gallery from "./components/Gallery"; // Importar Gallery para mostrar los resultados
@@ -12,6 +13,14 @@ const looksData = [
 ];
 
 function App() {
+  useEffect(() => {
+    // Inicializa Google Analytics con tu ID de seguimiento de GA4
+    ReactGA.initialize('G-Q4M0DEJL09'); // Reemplaza 'TU_ID_DE_GA4' con tu propio ID de seguimiento
+
+    // Envía la vista de la página
+    ReactGA.send("pageview"); // Envía la vista de la página para el seguimiento de la página
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
