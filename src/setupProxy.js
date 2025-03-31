@@ -4,8 +4,8 @@ module.exports = function(app) {
   // CORS (si es necesario)
   app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*"); // Permite acceso desde cualquier origen
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS"); // Métodos permitidos
-    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization"); // Encabezados permitidos
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
     next();
   });
 
