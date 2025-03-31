@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReactGA from "react-ga4";
 import "./App.css";
 import "./SearchBar.css";
-import Gallery from "./components/Gallery"; // Importar Gallery para mostrar los resultados
+import Gallery from "./components/Gallery";
+import logo from "./assets/logo.jpg"; // Asegúrate de que la ruta sea correcta
 
-// Datos simulados para los looks
 const looksData = [
   { id: 1, name: "Look Casual", gender: "mujer", occasion: "Casual" },
   { id: 2, name: "Look Elegante", gender: "hombre", occasion: "Fiesta" },
@@ -12,9 +13,17 @@ const looksData = [
 ];
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize("G-Q4M0DEJL09");
+    ReactGA.send("pageview");
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
+        <div className="logo-container">
+          <img src={logo} alt="Match My Look Logo" className="logo" />
+        </div>
         <h1>
           Bienvenido a<br />
           Match My Look
@@ -24,17 +33,14 @@ function App() {
         </h3>
       </header>
 
-      {/* Mostrar los resultados en la galería */}
       <main>
-        <Gallery /> {/* Gallery maneja la búsqueda y los filtros */}
+        <Gallery />
       </main>
     </div>
   );
 }
 
 export default App;
-
-
 
 
 

@@ -100,5 +100,21 @@
 }
 
 
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1000; /* Asegura que el logo esté al frente */
+}
+
+.logo {
+  width: 100px; /* Ajusta el tamaño del logo */
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white; /* Borde para mayor visibilidad */
+  box-shadow: none; /* Elimina sombras si hay */
+}
+
 
 
