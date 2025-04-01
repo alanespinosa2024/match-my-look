@@ -3,6 +3,7 @@ import ReactGA from "react-ga4";
 import "./App.css";
 import "./SearchBar.css";
 import Gallery from "./components/Gallery";
+import Footer from "./components/Footer"; // Importa el Footer
 import logo from "./assets/logo.jpg"; // Asegúrate de que la ruta sea correcta
 
 const looksData = [
@@ -13,7 +14,7 @@ const looksData = [
 ];
 
 function App() {
-  useEffect(() => {
+  useEffect(() => { 
     ReactGA.initialize("G-Q4M0DEJL09");
     ReactGA.send("pageview");
   }, []);
@@ -36,6 +37,10 @@ function App() {
       <main>
         <Gallery />
       </main>
+
+      {/* 👇 Agrega el Footer aquí */}
+      <Footer />
+
     </div>
   );
 }
