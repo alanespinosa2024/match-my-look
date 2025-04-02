@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Importamos useNavigate
 
 const styles = {
   footer: {
@@ -42,6 +43,13 @@ const styles = {
 };
 
 const Footer = () => {
+  const navigate = useNavigate(); // Inicializamos useNavigate
+
+  const handleClick = (e, path) => {
+    e.preventDefault(); // Prevenimos el comportamiento por defecto
+    navigate(path); // Navegamos sin recargar la página
+  };
+
   return (
     <footer style={styles.footer}>
       <div style={styles.socialIconsContainer}>
@@ -60,15 +68,14 @@ const Footer = () => {
       </div>
 
       <div style={styles.footerLinks}>
-        <a href="/about" style={styles.footerLink}>Acerca de Nosotros</a>
-        <a href="/privacy-policy" style={styles.footerLink}>Política de Privacidad</a>
-        <a href="/faq" style={styles.footerLink}>FAQ</a>
-        <a href="/contact" style={styles.footerLink}>Contacto</a>
+        <a href="/about" style={styles.footerLink} onClick={(e) => handleClick(e, "/about")}>Acerca de Nosotros</a>
+        <a href="/privacy-policy" style={styles.footerLink} onClick={(e) => handleClick(e, "/privacy-policy")}>Política de Privacidad</a>
+        <a href="/faq" style={styles.footerLink} onClick={(e) => handleClick(e, "/faq")}>FAQ</a>
+        <a href="/contact" style={styles.footerLink} onClick={(e) => handleClick(e, "/contact")}>Contacto</a>
       </div>
     </footer>
   );
 };
 
 export default Footer;
-
 

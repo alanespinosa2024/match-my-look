@@ -1,27 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
 import "./App.css";
 import "./SearchBar.css";
 import Gallery from "./components/Gallery";
-import Footer from "./components/Footer"; // Importa el Footer
-import logo from "./assets/logo.jpg"; // Asegúrate de que la ruta sea correcta
+import Footer from "./components/Footer";
+import About from "./components/Aboutus";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import ScrollHandler from "./components/ScrollHandler";
+import logo from "./assets/logo.jpg";
 
-const looksData = [
-  { id: 1, name: "Look Casual", gender: "mujer", occasion: "Casual" },
-  { id: 2, name: "Look Elegante", gender: "hombre", occasion: "Fiesta" },
-  { id: 3, name: "Look Deportivo", gender: "mujer", occasion: "Deportivo" },
-  { id: 4, name: "Look Formal", gender: "hombre", occasion: "Oficina" },
-];
+const App = () => {
+  const aboutRef = useRef(null);
+  const privacyRef = useRef(null);
+  const location = useLocation();
+  const [activeSection, setActiveSection] = useState(null);
 
-function App() {
   useEffect(() => {
-    // Cambia el título de la página
-    document.title = "Match My Look"; // Este es el nuevo título que aparecerá en la pestaña del navegador
-
-    // Inicializa Google Analytics
+    document.title = "Match My Look";
     ReactGA.initialize("G-Q4M0DEJL09");
     ReactGA.send("pageview");
-  }, []); // Este useEffect se ejecutará solo una vez cuando el componente se monte
+  }, []);
+
+  useEffect(() => {
+    if (location.pathname === "/about") {
+      setActiveSection("about");
+    } else if (location.pathname === "/privacy-policy") {
+      setActiveSection("privacy");
+    } else {
+      setActiveSection(null);
+    }
+  }, [location]);
 
   return (
     <div className="App">
@@ -29,25 +38,37 @@ function App() {
         <div className="logo-container">
           <img src={logo} alt="Match My Look Logo" className="logo" />
         </div>
-        <h1>
-          Bienvenido a<br />
-          Match My Look
-        </h1>
-        <h3 className="home-description">
-          Descubre looks y haz match con tu estilo. <br />
-        </h3>
+        <h1>Bienvenido a<br />Match My Look</h1>
+        <h3 className="home-description">Descubre looks y haz match con tu estilo.</h3>
       </header>
 
       <main>
         <Gallery />
       </main>
 
-      {/* 👇 Agrega el Footer aquí */}
+      {/* 🔽 Footer con enlaces 🔽 */}
       <Footer />
+
+      {/* 🔽 Sección de contenido dinámico (Aparece después del Footer) 🔽 */}
+      <div ref={aboutRef}>
+        {activeSection === "about" && <About />}
+      </div>
+
+      <div ref={privacyRef}>
+        {activeSection === "privacy" && <PrivacyPolicy />}
+      </div>
+
+      <ScrollHandler aboutRef={aboutRef} privacyRef={privacyRef} />
     </div>
   );
-}
+};
 
-export default App;
+const WrappedApp = () => (
+  <Router>
+    <Routes>
+      <Route path="/*" element={<App />} />
+    </Routes>
+  </Router>
+);
 
-
+export default WrappedApp;

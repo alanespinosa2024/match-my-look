@@ -1,0 +1,44 @@
+/* Estilos generales para la página de Política de Privacidad */
+.privacy-policy-container {
+    background-color: rgb(34, 34, 34); /* Fondo negro */
+    color: rgb(255, 255, 255); /* Texto blanco */
+    padding: 60px 20px;
+    text-align: center; /* Centra el texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Permite que el contenedor crezca según el contenido */
+  }
+  
+  .privacy-policy-title {
+    font-size: 3rem; /* Tamaño del título */
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .privacy-policy-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .privacy-policy-container p {
+    margin-bottom: 30px;
+  }
+  
+  /* Asegúrate de que los títulos h2 también tengan el color blanco */
+  .privacy-policy-container h2 {
+    color: rgb(255, 255, 255); /* Blanco */
+  }
+  
+  @media (max-width: 768px) {
+    .privacy-policy-title {
+      font-size: 2.5rem; /* Tamaño del título en pantallas pequeñas */
+    }
+  
+    .privacy-policy-text {
+      font-size: 1rem; /* Tamaño del texto en pantallas pequeñas */
+    }
+  }
+  

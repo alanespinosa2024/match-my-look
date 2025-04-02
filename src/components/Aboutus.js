@@ -1,11 +1,11 @@
-// About.js
 import React from 'react';
+import './Aboutus.css'; // Asegúrate de tener el archivo CSS para los estilos
 
 const About = () => {
   return (
-    <div>
-      <h1>Acerca de Nosotros</h1>
-      <p>
+    <div className="about-container">
+      <h1 className="about-title">Acerca de Nosotros</h1>
+      <p className="about-text">
         Match My Look! es una plataforma innovadora diseñada para ayudar a los
         amantes de la moda a descubrir y adoptar las últimas tendencias de
         manera sencilla y personalizada. Nos especializamos en explorar los
@@ -13,13 +13,13 @@ const About = () => {
         encontrar inspiración para cada ocasión: Fiesta, Trabajo, Sport y
         Casual.
       </p>
-      <p>
+      <p className="about-text">
         Si un look va con tu estilo, puedes hacer clic en "Match" para
         descubrir productos relacionados y acceder a opciones de compra
         directa, facilitando la experiencia de encontrar y adquirir prendas y
         accesorios que realmente te representen.
       </p>
-      <p>
+      <p className="about-text">
         Nuestra visión es convertirnos en la aplicación de referencia en moda,
         simplificando la exploración de estilos y brindando una experiencia de
         usuario optimizada. Para lograrlo, Match My Look ha sido desarrollado
