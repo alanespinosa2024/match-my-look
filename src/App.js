@@ -14,10 +14,14 @@ const looksData = [
 ];
 
 function App() {
-  useEffect(() => { 
+  useEffect(() => {
+    // Cambia el título de la página
+    document.title = "Match My Look"; // Este es el nuevo título que aparecerá en la pestaña del navegador
+
+    // Inicializa Google Analytics
     ReactGA.initialize("G-Q4M0DEJL09");
     ReactGA.send("pageview");
-  }, []);
+  }, []); // Este useEffect se ejecutará solo una vez cuando el componente se monte
 
   return (
     <div className="App">
@@ -40,13 +44,10 @@ function App() {
 
       {/* 👇 Agrega el Footer aquí */}
       <Footer />
-
     </div>
   );
 }
 
 export default App;
-
-
 
 
