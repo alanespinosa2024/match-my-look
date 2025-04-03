@@ -1,0 +1,117 @@
+.contact-section {
+    background-color: #333; /* Fondo similar al del footer */
+    color: #fff;
+    padding: 50px 20px;
+    margin-top: 40px; /* Espacio adicional arriba */
+  }
+  
+  .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .contact-description {
+    color: #ddd;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    text-align: left;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  label {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input,
+  textarea {
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  .submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .status-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #28a745; /* Color verde para éxito */
+  }
+  
+  .status-message.error {
+    color: #dc3545; /* Color rojo para error */
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .contact-description {
+      font-size: 1rem;
+    }
+  
+    label {
+      font-size: 1rem;
+    }
+  
+    input,
+    textarea {
+      font-size: 1rem;
+    }
+  
+    .submit-btn {
+      font-size: 1rem;
+    }
+  
+    .status-message {
+      font-size: 1rem;
+    }
+  }
+  
