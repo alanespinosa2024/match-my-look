@@ -1,10 +1,11 @@
 import React from "react";
+import './PrivacyPolicy.css'; // Asegúrate de que la ruta sea correcta
 
 const PrivacyPolicy = () => {
   return (
-    <div>
-        <h1>Política de Privacidad</h1>
-        <p>
+    <div className="privacy-policy-container"> {/* Aplicamos la clase aquí */}
+        <h1 className="privacy-policy-title">Política de Privacidad</h1>
+        <p className="privacy-policy-text">
         En <strong>Match My Look</strong>, respetamos la privacidad de nuestros
         usuarios y queremos que conozcas cómo manejamos la información en
         nuestra plataforma. <strong>No recopilamos información personal</strong>{" "}
