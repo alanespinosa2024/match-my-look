@@ -17,6 +17,7 @@ import look14 from '../assets/look14.jpg';
 import look15 from '../assets/look15.jpg';
 import look16 from '../assets/look16.jpg';
 import look17 from '../assets/look17.jpg';
+import look18 from '../assets/look18.jpg';
 import lookhombre1 from '../assets/lookhombre1.jpg';
 import lookhombre2 from '../assets/lookhombre2.jpg';
 import lookhombre3 from '../assets/lookhombre3.jpg';
@@ -173,6 +174,14 @@ export const looks = {
       occasion: 'Casual', 
       relatedProducts: ['Jeans', 'Chamarra piel'],
       description: 'Hailey Bieber luce un sexy look casual con unos jeans wide legs, una croptop verde, chamarra de piel negra con unos zapatos mocasines bostonianos para un look my chic.' 
+    },
+    { 
+      id: 18, 
+      name: 'Ester Expósito', 
+      imageUrl: look18, 
+      occasion: 'Fiesta', 
+      relatedProducts: ['Vestido'],
+      description: 'Ester deslumbra en Los Ángeles con un look audaz y sofisticado: un vestido corto rojo con cierre y solapa.' 
     },
   ],
   hombre: [
