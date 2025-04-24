@@ -82,6 +82,8 @@ const LookSeleccionado = ({ selectedLook }) => {
     
     "Vestido": 'https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/mujer-ropa-vestidos/',
     
+    "Chamarra": 'https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/chamarra/',
+
     "ropa deportiva": 'https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/mujer-ropa-shorts/',
 
     "Shorts para mujer": 'https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/mujer-ropa-bermudas-y-shorts/',

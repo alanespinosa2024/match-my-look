@@ -18,6 +18,7 @@ import look15 from '../assets/look15.jpg';
 import look16 from '../assets/look16.jpg';
 import look17 from '../assets/look17.jpg';
 import look18 from '../assets/look18.jpg';
+import look19 from '../assets/look19.jpg';
 import lookhombre1 from '../assets/lookhombre1.jpg';
 import lookhombre2 from '../assets/lookhombre2.jpg';
 import lookhombre3 from '../assets/lookhombre3.jpg';
@@ -182,6 +183,14 @@ export const looks = {
       occasion: 'Fiesta', 
       relatedProducts: ['Vestido'],
       description: 'Ester deslumbra en Los Ángeles con un look audaz y sofisticado: un vestido corto rojo con cierre y solapa.' 
+    },
+    { 
+      id: 19, 
+      name: 'Gigi Hadid', 
+      imageUrl: look19,
+      occasion: 'Casual', 
+      relatedProducts: ['Chamarra'],
+      description: 'Gigi Hadid lo vuelve a hacer: con un estilo effortless y moderno, aparece luciendo una chamarra de cuero café que ya se ha vuelto tendencia.Con cuello tipo blusa, bolsillos con solapa y un corte relajado, este look equilibra lo clásico con lo cool. Ideal para quienes buscan inspiración con actitud. Un outfit versátil que puedes llevar con jeans, pantalones rectos o falda midi.¿Lista para recrear este look icónico?.' 
     },
   ],
   hombre: [
