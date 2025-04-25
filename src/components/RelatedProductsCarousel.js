@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import './RelatedProductCarousel.css';
 
 // Claves de WooCommerce (Usa variables de entorno en producción)
 const API_KEY = "ck_d1f69b84bded161bcadb7cdc5538f3a0f4cc93fd";
@@ -34,7 +35,6 @@ async function getCategoryIdBySlug(slug) {
     return null;
   }
 }
-
 
 // Obtener productos por ID de categoría
 async function fetchCategoryProductsById(categoryId) {
@@ -133,13 +133,13 @@ const LookSeleccionado = ({ selectedLook }) => {
       return;
     }
 
-    // Evitar productos duplicados y limitar a 5
+    // Evitar productos duplicados y limitar a 8
     setCarouselProducts((prevProducts) => {
       const uniqueProducts = products.filter(
         (product) => !prevProducts.some((p) => p.id === product.id)
       );
       console.log("📦 Estado actualizado con productos:", uniqueProducts);
-      return [...prevProducts, ...uniqueProducts].slice(0, 5);
+      return [...prevProducts, ...uniqueProducts].slice(0, 8);
     }); 
   }
 
@@ -168,14 +168,15 @@ const LookSeleccionado = ({ selectedLook }) => {
     fetchCategories();
   }, [selectedLook]); // Dependencia en `selectedLook`, para que se ejecute cada vez que cambia el look
   
-
-  // Configuración del carrusel
+  // Configuración del carrusel con barra de desplazamiento y sin puntos
   const sliderSettings = {
-    dots: true,
+    dots: false,  // Desactivar los puntos
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    swipeToSlide: true,
+    arrows: true,  // Añadir las flechas de navegación
   };
 
   return (

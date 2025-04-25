@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 // Claves de WooCommerce (Usa variables de entorno en producción)
 const API_KEY = "ck_d1f69b84bded161bcadb7cdc5538f3a0f4cc93fd";
 const API_SECRET = "cs_47a034d947e28dbc135f0b14539c358a802a233f";
@@ -44,7 +43,7 @@ async function getCategoryIdBySlug(slug) {
 async function fetchCategoryProductsById(categoryId) {
   console.log("🔍 Buscando productos para categoryId:", categoryId);  // Verificar el ID
   try {
-    const response = await fetch(`${BASE_URL}/products?category=${categoryId}&per_page=5`, {
+    const response = await fetch(`${BASE_URL}/products?category=${categoryId}&per_page=10`, {
       headers: {
         "Authorization": "Basic " + btoa(`${API_KEY}:${API_SECRET}`),
       },
@@ -67,66 +66,37 @@ const LookSeleccionado = ({ selectedLook }) => {
   const staticCategoryMap = {
     // Productos de Look Mujer
     "Cardigans": "https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/cardigans-mujer/",
-    
     "Blazer gris": "https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/sacos-mujer/",
-    
     "Vestido corto": "https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/mujer-ropa-faldas/",
-    
     "Blusa floral": "https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/blusas-y-camisas-mujer-ropa/",
-    
     "mujer-ropa-tops": "https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/mujer-ropa-tops/",
-
     "Jeans": "https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/mujer-ropa-pantalones/",
-    
     "Abrigo": 'https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/mujer-ropa-abrigos/',
-    
     "Vestido": 'https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/mujer-ropa-vestidos/',
-    
     "Chamarra": 'https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/chamarra/',
-
     "ropa deportiva": 'https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/mujer-ropa-shorts/',
-
     "Shorts para mujer": 'https://www.masdescuentos.mx/categoria/moda/mujer/mujer-ropa/mujer-ropa-bermudas-y-shorts/',
-
     "Sudadera Nike": 'https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/mujer-ropa-leggings/',
-    
     "Zapatos formales": 'https://www.masdescuentos.mx/categoria/moda/mujer/mujer-calzado/zapatillas/',
-
     "Blusa": 'https://www.masdescuentos.mx/categoria/mujer/mujer-ropa/blusas-y-camisas-mujer-ropa/',
 
     // Productos de Look Hombre
     "Saco blanco": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/sacos-hombre-ropa/",
-    
     "Camisa formal azul": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/hombre-ropa-chamarras-y-chalecos/",
-    
     "Playera blanca": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/sacos-hombre-ropa/",
-
     "Pants Puma": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/hombre-ropa-sweaters-y-sudaderas/", // Añadido mapeo para pantalón de vestir
-
     "Tenis de running": "https://www.masdescuentos.mx/categoria/moda/hombre/hombre-calzado/hombre-calzado-tenis/running/",
-
     "Playera Puma para hombre": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/hombre-ropa-playeras-y-polos/",
-    
     "Camisa estampada": "https://www.masdescuentos.mx/categoria/moda/hombre/hombre-ropa/hombre-ropa-camisas-casuales/",
-   
     "Sudadera deportiva": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/hombre-ropa-sweaters-y-sudaderas/",
-
     "Saco para hombre": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/sacos-hombre-ropa/",
-
     "Chamarra para hombre": "https://www.masdescuentos.mx/categoria/moda/hombre/hombre-ropa/hombre-ropa-pantalones/",
-    
     "Playera hombre": "https://www.masdescuentos.mx/categoria/hombre/hombre-calzado/hombre-calzado-botas-y-botines/",
-
     "Sacos hombre": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/sacos-hombre-ropa/",
-
     "Blazer azul": "https://www.masdescuentos.mx/categoria/moda/hombre/hombre-ropa/abrigos/",
-    
     "Zapatillas": "https://www.masdescuentos.mx/categoria/moda/hombre/hombre-calzado/hombre-calzado-casuales/",
-    
     "Sudadera": "https://www.masdescuentos.mx/categoria/hombre/hombre-ropa/hombre-ropa-pantalones/",
-  
     "Jerseys": "https://www.masdescuentos.mx/categoria/moda/hombre/hombre-ropa/jerseys/",
-  
   };
 
   // Obtener URL de categoría
@@ -209,13 +179,13 @@ if (!products.length) {
   return;
 }
 
-    // Evitar productos duplicados y limitar a 5
+    // Evitar productos duplicados y limitar a 8
     setCarouselProducts((prevProducts) => {
       const uniqueProducts = products.filter(
         (product) => !prevProducts.some((p) => p.id === product.id)
       );
       console.log("📦 Estado actualizado con productos:", uniqueProducts);
-      return [...prevProducts, ...uniqueProducts].slice(0, 5);
+      return [...prevProducts, ...uniqueProducts].slice(0, 8);
     }); 
   }
 
@@ -249,8 +219,9 @@ if (!products.length) {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    swipeToSlide: true,
   };
 
   return (
