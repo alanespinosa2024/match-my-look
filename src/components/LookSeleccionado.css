@@ -30,7 +30,8 @@
 /* Imagen del producto */
 .related-product img {
   width: 100%; /* Asegura que ocupe todo el ancho disponible */
-  height: 300px; /* Ajusta la altura según el diseño */
+  height: auto; /* Ajusta la altura según el diseño */
+  max-height: 250px; /* Agrega un max-height para evitar que se distorsione demasiado */
   object-fit: cover; /* Hace que la imagen cubra todo el contenedor sin distorsionarse */
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -92,7 +93,8 @@
   }
 
   .related-product img {
-    height: 200px; /* Reducir la altura de la imagen */
+    height: auto; /* Deja que la imagen se ajuste automáticamente */
+    max-height: 200px; /* Asegura que la imagen no se haga demasiado grande */
   }
 
   .related-product p {
@@ -121,7 +123,8 @@
   }
 
   .related-product img {
-    height: 150px; /* Reducir la altura de la imagen */
+    height: auto; /* Deja que la imagen se ajuste automáticamente */
+    max-height: 150px; /* Limita la altura para que no se vean demasiado pequeñas */
   }
 
   .buy-button {
