@@ -84,4 +84,49 @@
   overflow: visible !important; /* Permite que los elementos sean visibles */
 }
 
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .related-product {
+    width: 180px; /* Reducir el ancho de cada producto */
+    min-height: 300px; /* Reducir la altura mínima */
+  }
+
+  .related-product img {
+    height: 200px; /* Reducir la altura de la imagen */
+  }
+
+  .related-product p {
+    font-size: 0.7rem; /* Reducir el tamaño de la fuente */
+  }
+
+  .buy-button {
+    font-size: 12px; /* Reducir el tamaño del texto */
+    padding: 8px 16px; /* Reducir el padding */
+  }
+
+  .related-products-carousel {
+    padding: 20px 10px; /* Reducir el padding del carrusel */
+  }
+
+  .slick-slide {
+    margin: 0 10px; /* Reducir la separación entre los productos */
+  }
+}
+
+/* Media Queries para pantallas muy pequeñas (por ejemplo, teléfonos en modo vertical) */
+@media (max-width: 480px) {
+  .related-product {
+    width: 150px; /* Hacer los productos más pequeños */
+    min-height: 250px; /* Reducir la altura mínima */
+  }
+
+  .related-product img {
+    height: 150px; /* Reducir la altura de la imagen */
+  }
+
+  .buy-button {
+    font-size: 10px; /* Reducir aún más el tamaño del texto */
+    padding: 6px 12px; /* Reducir aún más el padding */
+  }
+}
 
