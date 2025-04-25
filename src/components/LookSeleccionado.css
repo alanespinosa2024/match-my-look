@@ -79,16 +79,16 @@
 /* Responsive */
 @media (max-width: 768px) {
   .related-product {
-    width: 180px !important;
-    min-height: 300px;
+    width: 200px !important; /* Aumenté el ancho de los productos en tabletas */
+    min-height: 350px; /* Ajusté la altura */
   }
 
   .related-product img {
-    max-height: 200px;
+    max-height: 300px; /* Hice las imágenes más grandes en tabletas */
   }
 
   .related-product p {
-    font-size: 0.7rem;
+    font-size: 0.8rem; /* Ajusté el tamaño de la fuente */
   }
 
   .buy-button {
@@ -99,17 +99,17 @@
 
 @media (max-width: 480px) {
   .related-product {
-    width: 150px !important;
-    min-height: 250px;
+    width: 180px !important; /* Ajusté el ancho para teléfonos */
+    min-height: 300px;
   }
 
   .related-product img {
-    max-height: 150px;
+    max-height: 250px; /* Aumenté el max-height para que se vean más grandes */
   }
 
   .buy-button {
-    font-size: 10px;
-    padding: 6px 12px;
+    font-size: 12px;
+    padding: 8px 16px;
   }
 }
 
