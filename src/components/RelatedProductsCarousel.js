@@ -139,7 +139,7 @@ const LookSeleccionado = ({ selectedLook }) => {
         (product) => !prevProducts.some((p) => p.id === product.id)
       );
       console.log("📦 Estado actualizado con productos:", uniqueProducts);
-      return [...prevProducts, ...uniqueProducts].slice(0, 8);
+      return [...prevProducts, ...uniqueProducts].slice(0, 2);
     }); 
   }
 
@@ -170,10 +170,10 @@ const LookSeleccionado = ({ selectedLook }) => {
   
   // Configuración del carrusel con barra de desplazamiento y sin puntos
   const sliderSettings = {
-    dots: false,  // Desactivar los puntos
+    dots: true,  // Desactivar los puntos
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     swipeToSlide: true,
     arrows: true,  // Añadir las flechas de navegación
