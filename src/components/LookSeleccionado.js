@@ -62,6 +62,9 @@ const LookSeleccionado = ({ selectedLook }) => {
   const [carouselProducts, setCarouselProducts] = useState([]);
   const [processedCategories, setProcessedCategories] = useState([]);
 
+    const [loading, setLoading] = useState(false); // Estado para controlar la carga de productos
+  
+
   // Mapeo de nombres de productos a URLs de categoría
   const staticCategoryMap = {
     // Productos de Look Mujer
@@ -283,7 +286,7 @@ if (!products.length) {
           </Slider>
         </div>
       ) : (
-        <p>No hay productos relacionados disponibles.</p>
+        <p>Buscando productos para ti....</p>
       )}
     </div>
   );  
